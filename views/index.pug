@@ -5,4 +5,9 @@ block content
   p Welcome to #{title}
   p This is Lab Assignment using pug templates to dynamically generate web pages on the server side.      
   //- a(class='button') Press Me
-  <button (type="button", class="btn btn-secondary")>PressMe</button>
+  <button (type="button", class="btn btn-secondary")>PressMe</button><br><br>
+  script.
+    var client_count = 0;
+    function update(){
+      client_count++
+      document.getElementById("target").innerHTML = `Value now ${client_count}`
